@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semua Ada Di Sini</title>
+<style>
+body{background:#000;color:#fff;font-family:sans-serif;margin:0;padding-bottom:70px}
+.top-bar{
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 99;
+  border-bottom: 1px solid #222;
+}
+.header{
+  text-align:center;
+  color:red;
+  font-size:24px;
+  font-weight:bold;
+  padding:12px 12px 8px 12px;
+}
+.search-box{
+  padding:0 10px 10px 10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.search-box input{
+  width:100%;
+  padding:10px 15px;
+  border-radius:25px;
+  border:none;
+  background:#222;
+  color:#fff;
+  outline:none;
+}
+.video-card{margin:15px 0;padding-bottom:15px;border-bottom:1px solid #222}
+video{width:100%;background:#000;border-radius:12px}
+.info{display:flex;gap:10px;margin-top:8px;align-items:center}
+.info img{width:40px;height:40px;border-radius:50%;background:#333}
+.btns{display:flex;gap:20px;margin-top:10px;font-size:14px}
+.btns a{background:none;border:none;color:#aaa;cursor:pointer;display:flex;align-items:center;gap:5px;text-decoration:none}
+
+/* SOSIAL KIRI VERSI EMOJI */
+.social-left{position:fixed;left:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:100}
+.social-left a{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 2px 8px rgba(0,0,0,0.5)}
+.wa{background:#25D366}
+.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.tg{background:#0088cc}
+
+.navbar{position:fixed;bottom:0;left:0;right:0;background:#111;display:flex;justify-content:space-around;padding:8px 0;border-top:1px solid #222}
+.navbar div{text-align:center;font-size:12px;color:#aaa}
+.navbar.active{color:red}
+
+/* POPUP DENGAN EFEK BLUR */
+.popup-overlay{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999
+}
+.popup-box{
+  background:#222;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  width:80%;
+  max-width:350px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+  animation:popupMuncul 0.3s ease;
+}
+@keyframes popupMuncul{
+  from{transform:scale(0.8); opacity:0}
+  to{transform:scale(1); opacity:1}
+}
+.popup-box h3{margin:0 0 10px 0;color:#fff}
+.popup-box p{color:#aaa;margin-bottom:20px}
+.popup-btns{display:flex;gap:10px;justify-content:center}
+.popup-btns a{padding:10px 20px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;text-decoration:none;display:inline-block}
+.btn-batal{background:#555;color:#fff}
+.btn-lanjut{background:red;color:#fff}
+</style>
+
+<!-- POPUNDER -->
+<script src="https://pl30597528.effectivecpmnetwork.com/2e/f4/31/2ef431d07d2482b267b4f4ec25f5f9be.js"></script>
+
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="header">Videos.com</div>
+  <div class="search-box">
+    <input type="text" placeholder="Cari video...">🔍
+  </div>
+</div>
+
+<!-- SOSIAL KIRI -->
+<div class="social-left">
+  <a href="https://t.me/aksestanpabatas" class="wa" target="_blank">💬</a>
+  <a href="https://t.me/aksestanpabatas" class="ig" target="_blank">📷</a>
+  <a href="https://t.me/aksestanpabatas" class="tg" target="_blank">✈️</a>
+</div>
+
+<!-- VIDEO 1 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/QqnXzto.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Mengikuti Irama Bernyanyi</b><br><small>13.900 x ditonton • 1 hari lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/s71euj0.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Sangat Menarik</b><br><small>3.300 x ditonton • 4 hari lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 3 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/9Gpt8UD.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Asik Main Nya</b><br><small>7.200 x ditonton • 2 hari lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 4 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/kVp3KgL.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Traveling</b><br><small>4.900 x ditonton • 5 hari lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 5 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/oLdgqzn.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Cerita Menarik</b><br><small>9.100 x ditonton • 1 jam lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 6 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/AFqcedz.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Viral Terbaru</b><br><small>17.200 x ditonton • 3 jam lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 7 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/fCwFgMD.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Keasikan Bermain</b><br><small>8.900 x ditonton • 30 menit lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 8 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/Q05gHPh.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Girang Banget</b><br><small>10.500 x ditonton • 5 jam lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 9 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/TelyWsG.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Vlog Terbaik</b><br><small>11.100 x ditonton • 1 hari lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- VIDEO 10 -->
+<div class="video-card">
+<video controls><source src="https://i.imgur.com/0tj01Ya.mp4" type="video/mp4"></video>
+<div class="info"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"><div><b>Pertama Mengasikan</b><br><small>8.700 x ditonton • 2 jam lalu</small></div></div>
+<div class="btns"><a href="https://t.me/aksestanpabatas" target="_blank">⬇️ Unduh</a><a href="#">❤️ Suka</a><a href="#">🔄 Bagikan</a></div>
+</div>
+
+<!-- NAVBAR BAWAH -->
+<div class="navbar"><div class="active">—<br>Utama</div><div>=<br>Reels</div><div>|<br>Profil</div><div>||<br>Masuk</div></div>
+
+<!-- POPUP KONFIRMASI USIA -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <h3>KONFIRMASI USIA</h3>
+    <p>Apakah Anda Barusia 18+ Dan Ingin Melanjutkan?</p>
+    <div class="popup-btns">
+      <a href="https://www.profitableratecpmnetwork.com/e9fjdtkhn?key=ee482c23036a0552aec29afdd2f91a14" class="btn-batal" target="_blank">Batal</a>
+      <a href="https://www.profitableratecpmnetwork.com/e9fjdtkhn?key=ee482c23036a0552aec29afdd2f91a14" class="btn-lanjut" target="_blank">Lanjut</a>
+    </div>
+  </div>
+</div>
+
+<script>
+let popupMuncul = false;
+let videoTerakhir = null;
+
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    if(!popupMuncul){
+      document.getElementById('popup').style.display = 'flex';
+      popupMuncul = true;
+      document.querySelectorAll('video').forEach(v => {
+        if(!v.paused) videoTerakhir = v;
+        v.pause();
+      });
+    }
+  }, 18000);
+});
+
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'visible') {
+    document.getElementById('popup').style.display = 'none';
+    if(videoTerakhir){ videoTerakhir.play(); } else { document.querySelector('video').play(); }
+  }
+});
+</script>
+
+ <!-- Histats.com START -->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5024188,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();
+</script>
+<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?5024188&101" alt="" border="0"></a></noscript>
+<!-- Histats.com END -->
+<!-- SCRIPT TRACK HISTATS PER JUDUL VIDEO -->
+<script>
+function trackVideoHistats(judul){
+  _Hasync.push(['Histats.page_title', 'Video: ' + judul]);
+  _Hasync.push(['Histats.track_hits', '']);
+}
+
+document.querySelectorAll('video').forEach(video => {
+  video.addEventListener('play', function(){
+    let judul = this.closest('.video-card').querySelector('b').innerText;
+    trackVideoHistats(judul);
+    console.log('Histats tracked:', judul);
+  });
+});
+</script>
+
+</body>
+  </html>
